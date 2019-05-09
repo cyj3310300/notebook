@@ -25,19 +25,42 @@ git add  dirfile //也可以提交文件夹
 git commit -m "解释说明性语句" 
 ```
 
-### 修改文件的名字
+### 常用操作：
+- 修改文件的名字
 ```
 git mv 原文件名 新文件名
 git commit -m "更新了名字"
 git push
 ```
-### 删除一个文件
+- 删除一个文件
 ```
 git rm xxx.py
 git commit -m"删除了xxx.py"
 git push origin master # 默认的使用git push 也可以
 ```
-### 分支
+- 查看工作区状态
+> ```
+git status
+```
+时刻掌握工作区（就是本地文件夹）的状态，比如哪些文件有更改，显示这样：modified: xxx.py(红色).但如果是名称中有中文不显示名字，所以最好使用英文名．此时使用```git add xxx.py```提交后,再使用```git status```时,显示modified:  xxx.py(绿色).接下来```git commit -m"提交xxx.py"```后,再使用```git status```,显示:
+```
+On branch master
+nothing to commit, working tree clean
+```
+表示现在的暂存区是干净的，没有还没有提交到仓库的文件。
+
+- 查看文件的具体变化情况
+> 如果工作区中的文件有了更改，这时可以使用git diff 2.txt命令，看看此次有哪些变动。如果更改后直接add至暂存区时再使用diff就看不到变动部分了，因为diff反映的是工作区的文档情况。
+```
+git diff xxx.py
+```
+- 查看仓库的版本信息：
+```
+git log # 显示从最近到最远的提交日志
+git log --pretty=oneline  # 简化显示，看的更清楚
+git reflog  # 可以显示所有版本的版本号，前面黄色的6个字符串
+```
+### 分支方法
 - 创建新分支
 ```
 git branch dev # 创建一个新分支dev
