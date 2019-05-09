@@ -1,6 +1,10 @@
 ## git_github安装使用
-
-
+- 修改文件的名字
+```
+git mv 原文件名 新文件名
+git commit -m "更新了名字"
+git push
+```
 
 ## git中：关于origin和master
 
@@ -14,5 +18,5 @@
 - ```$git push A B:C```     其中A和C是分别remote端的一个repository的名字和branch的名字，B是本地端branch的名字
 意思是把本地的B推送到remotes/A/C下。当B=C时可以直接省略为：git push A B。
 - 比如：```"git push origin master:master"``` 可以直接省略为"git push origin master".
-- 
+- 每个仓库都可以使用origin这个指针名字,不会冲突
 ---
