@@ -86,6 +86,7 @@ git branch -d dev  # 先删除本地分支
 git branch -D dev # 如果分支没有合并,需要用此命令强制删除未合并的分支
 git push origin --delete dev　　# 删除远程端的分支
 ```
+
 ## 工作区,暂存区,仓库区概念
 - 工作区（working）：电脑磁盘上的那个目录就是工作区。
 - 暂存区（Index）：使用git add命令把工作区的文件提交到暂存区。
