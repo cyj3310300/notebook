@@ -118,8 +118,9 @@ sudo apt install wine-development　#发行版
 wine --version     #如果出现wine的版本则说明安装成功
 ```
 - 使用
-	- wine程序安装在/opt目录，工作目录在~/.wine。
-	- 将windows下的安装执行文件拷到ubuntu下的某一目录，在命令行下执行 wine 应用程序.exe,
+	- 将windows下的安装执行文件拷到ubuntu下的某一目录，在命令行下执行 wine xxx.exe,
+	- wine程序安装在/opt目录，安装的win软件在~/.wine/drive_c目录下。
+	
 
 ### 安装opencv
 - 更新数据
