@@ -70,9 +70,10 @@ git checkout -b dev表示创建并切换到dev分支上,相当于上面的两个
 ```
 - 在分支下的工作
 ```
+vim xxx.py # 如果在dev分支下创建了一个新文件而没有提交到仓库中，也不属于dev分支上的，也就是说回到master分支时也可以看到这个文件，相反切换到master分支就看不到这个文件了
 git add xxx.py 
 git commit -m"dev分支下添加一个文件"
-git push origin dev # 将该分支推送到远端,然后在远端就可以看到这个分支了
+git push origin dev # 提交到远端的分支名称必须和本地一致，将该分支推送到远端,然后在远端就可以看到这个分支了
 ```
 - 分支的合并
 ```
