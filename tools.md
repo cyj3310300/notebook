@@ -60,6 +60,22 @@ git log # 显示从最近到最远的提交日志
 git log --pretty=oneline  # 简化显示，看的更清楚
 git reflog  # 可以显示所有版本的版本号，前面黄色的6个字符串
 ```
+- 查看本地端连接的远程端的仓库
+```
+git remote -v
+```
+- 多个本地仓库不可以提交到一个远程端
+- 可以将一个本地仓库提交到多个远程端
+关键在于多个远程端需要多个不同的origin名称,如下使用了origin1和origin2
+```
+git remote add origin1 git@github.com:hjiangxc/test1.git 
+git remote add origin2 git@github.com:hjiangxc/test2.git 
+```
+提交时,分别使用以下提交到不同远程端
+```
+git push origin1 master
+git push origin2 master
+```
 ### 分支方法
 - 创建新分支
 ```
