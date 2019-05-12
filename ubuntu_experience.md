@@ -51,3 +51,22 @@ chmod u=rwx，g=rx，o=rx abc：同上u=用户权限，g=组权限，o=不同组
 chmod u-x，g+w abc：给abc去除用户执行的权限，增加组写的权限
 chmod a+r abc：给所有用户添加读的权限
 ```
+
+### ubuntu远程win
+- 首先安装rdesktop
+```
+sudo apt install rdesktop
+```
+- 全屏连接
+```
+   rdesktop -f -a 16  192.168.1.112
+   
+   -f 全屏模式,从全屏模式切换出来按Ctrl+Alt+Enter
+   -a 连接颜色深度（最高到16位），一般选16才会显示真彩色（window7支持32位）
+```
+- 窗口模式
+```
+rdesktop -g 800*600 -a 16 192.168.0.101
+-g 桌面大小
+以800*600（W＊H）窗口大小、真彩色、打开远程192.168.0.101
+```

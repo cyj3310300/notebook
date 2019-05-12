@@ -1,5 +1,5 @@
 ## git_github安装使用
-### 简单使用流程
+#### 简单使用流程
 - 机器绑定github账号
 ```
 git config --global user.name【空格】 "GitHub的用户名"cyj3310300
@@ -24,8 +24,7 @@ git add  dirfile //也可以提交文件夹
 ```
 git commit -m "解释说明性语句" 
 ```
-
-### 常用操作：
+#### 常用操作：
 - 修改文件的名字
 ```
 git mv 原文件名 新文件名
@@ -76,7 +75,7 @@ git remote add origin2 git@github.com:hjiangxc/test2.git
 git push origin1 master
 git push origin2 master
 ```
-### 分支方法
+#### 分支方法
 - 创建新分支
 ```
 git branch dev # 创建一个新分支dev
@@ -103,14 +102,13 @@ git branch -d dev  # 先删除本地分支
 git branch -D dev # 如果分支没有合并,需要用此命令强制删除未合并的分支
 git push origin --delete dev　　# 删除远程端的分支
 ```
-
-## 工作区,暂存区,仓库区概念
+#### 工作区,暂存区,仓库区概念
 - 工作区（working）：电脑磁盘上的那个目录就是工作区。
 - 暂存区（Index）：使用git add命令把工作区的文件提交到暂存区。
 - 仓库区（HEAD）：使用git commit命令把暂存区的所有文件全部提交到仓库区。
 ![s](https://github.com/cyj3310300/notebook/blob/master/pic/trees.png?raw=true)
-## origin和master原理
 
+#### origin和master原理
 > git的服务器端(remote)端包含多个repository，每个repository可以理解为一个项目。而每个repository下有多个branch。"origin"就是指向某一个repository的指针。服务器端的"master"（强调服务器端是因为本地端也有master）就是指向某个repository的一个branch的指针。
 
 这是服务器端(remote)的情况：
@@ -122,4 +120,5 @@ git push origin --delete dev　　# 删除远程端的分支
 意思是把本地的B推送到remotes/A/C下。当B=C时可以直接省略为：git push A B。
 - 比如：```"git push origin master:master"``` 可以直接省略为"git push origin master".
 - 每个仓库都可以使用origin这个指针名字,不会冲突
----
+
+
