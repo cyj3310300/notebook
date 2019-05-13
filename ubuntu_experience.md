@@ -53,7 +53,8 @@ chmod a+r abc：给所有用户添加读的权限
 ```
 
 ### ubuntu远程win
-- 首先安装rdesktop
+目前该方法只适用于在同一个局域网内可实现.
+- - 首先安装rdesktop
 ```
 sudo apt install rdesktop
 ```
