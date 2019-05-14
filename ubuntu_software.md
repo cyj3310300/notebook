@@ -58,6 +58,18 @@ Icon=～/Downloads/pycharm-2017.1.4/bin/pycharm.png
 Terminal=pycharm
 Categories=Pycharm;
  ```
+ 
+### jupyter notebook
+- 安装
+```
+pip3 install jupyter  # 在python3下安装
+pip install jupyter　　＃　在python2下安装
+```
+- 打开
+```
+jupyter notebook
+```
+- 使用
 
 ### 微信
 ```
