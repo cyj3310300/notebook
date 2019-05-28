@@ -14,6 +14,7 @@
 - 安装pip
 ```
 sudo apt install python-pip
+sudo apt install python3-pip
 ```
 - 更改下载源。修改 ~/.pip/pip.conf (没有就创建一个文件夹及文件。文件夹要加“.”，表示是隐藏文件夹)
 内容如下：
@@ -98,7 +99,7 @@ indicator-sysmonitor &
 - [下载moeditor](https://github.com/Moeditor/Moeditor/releases/tag/v0.2.0-beta)
 ```
 sudo apt-get -f install    # 安装需要的依赖包
-dpkg -i moeditor_0.2.0-1_amd64.deb
+sudo dpkg -i moeditor_0.2.0-1_amd64.deb
 ```
 ### 安装wine：
 - wine是基于32位架构的，现在计算机基本上都是64位，因此需要启用32位架构，如果计算机是32位的则忽略此步。  
