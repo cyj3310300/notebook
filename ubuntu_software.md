@@ -2,11 +2,11 @@
 记录使用ubuntu下的经验、方法、心得体会
 ### *1.系统安装*
 - 如果是只安装一个系统，直接“下一步”安装就好。
-- 如果是安装“双系统”
+- 如果是安装“双系统”,先安装win10.再安装ubuntu.各个区按照下面顺序创建
 	- Swap（相当于电脑内存）：逻辑分区、大小设置为电脑内存大小，2G，4G；
-	- /boot（引导分区）：主分区：大小设置为2G；
 	- /home（用户存储数据用）：逻辑分区，要尽可能大，100G空间可以设置为70G。
 	- /.（主分区）：主分区，用于存放系统，相当于win7的C盘，30G。
+	- /boot（引导分区）：主分区：大小设置为2G；
 - 软件和更新->下载自->其他站点->中国->mirros.aliyun.com
 
 ### *2.安装软件*
@@ -41,6 +41,9 @@ conda config --set show_channel_urls yes
 ### pycharm
 - [下载linux版](https://www.jetbrains.com/pycharm/)
 - 解压缩到 /usr/local/目录下
+```
+sudo tar -xzvf xxx.tar.gz
+```
 - sh /usr/local/pycharm/bin/pycharm.sh
 - 将程序添加快捷方式
 	- 第一步：
@@ -54,8 +57,8 @@ Type=Application
 Name=Pycharm
 GenericName=Pycharm3
 Comment=Pycharm3:The Python IDE
-Exec=sh ～/Downloads/pycharm-2017.1.4/bin/pycharm.sh
-Icon=～/Downloads/pycharm-2017.1.4/bin/pycharm.png
+Exec=sh /usr/local/pycharm-community-2019.1.1/bin/pycharm.sh
+Icon=/usr/local/pycharm-community-2019.1.1/bin/pycharm.png
 Terminal=pycharm
 Categories=Pycharm;
  ```
@@ -166,7 +169,7 @@ cd build
 ```
 sudo cmake -D WITH_TBB=ON -D BUILD_NEW_PYTHON_SUPPORT=ON -D WITH_V4L=ON -D INSTALL_C_EXAMPLES=ON -D INSTALL_PYTHON_EXAMPLES=ON -D BUILD_EXAMPLES=ON -D WITH_QT=ON -D WITH_OPENGL=ON ..
 ```
-等一会下载ippicv_2017u3_lnx_intel64_general_20170822.tgz，可手动下载(https://github.com/opencv/opencv_3rdparty/blob/ippicv/master_20170822/ippicv/ippicv_2017u3_lnx_intel64_general_20170822.tgz)
+下载ippicv_2017u3_lnx_intel64_general_20170822.tgz需要一段时间，可手动[下载](https://github.com/opencv/opencv_3rdparty/blob/ippicv/master_20170822/ippicv/ippicv_2017u3_lnx_intel64_general_20170822.tgz),结束后才可进行下一步
 ```
 sudo cmake ..
 sudo apt-get install libgazebo9 libgazebo9-dev    # 如果下一步不行，执行这一步
