@@ -147,25 +147,33 @@ sudo apt-get install build-essential
 sudo apt-get install cmake git libgtk2.0-dev pkg-config libavcodec-dev libavformat-dev libswscale-dev
 sudo apt-get install python-dev python-numpy libtbb2 libtbb-dev libjpeg-dev libpng-dev libtiff-dev libjasper-dev libdc1394-22-dev
 ```
+E: 无法定位软件包 libjasper-dev，使用一下命令安装
+```
+sudo add-apt-repository "deb http://security.ubuntu.com/ubuntu xenial-security main"
+sudo apt update
+sudo apt install libjasper1 libjasper-dev
+```
+
 - [下载openc3.4.1数据包](https://github.com/opencv/opencv/releases)
 - 解压
 ```
 sudo unzip opencv-3.4.1.zip
 cd opencv-3.4.1
-mkdir build
+sudo mkdir build
 cd build
 ```
 - 使用CMAKE安装opencv
 ```
 sudo cmake -D WITH_TBB=ON -D BUILD_NEW_PYTHON_SUPPORT=ON -D WITH_V4L=ON -D INSTALL_C_EXAMPLES=ON -D INSTALL_PYTHON_EXAMPLES=ON -D BUILD_EXAMPLES=ON -D WITH_QT=ON -D WITH_OPENGL=ON ..
 ```
+等一会下载ippicv_2017u3_lnx_intel64_general_20170822.tgz，可手动下载(https://github.com/opencv/opencv_3rdparty/blob/ippicv/master_20170822/ippicv/ippicv_2017u3_lnx_intel64_general_20170822.tgz)
 ```
 sudo cmake ..
 sudo apt-get install libgazebo9 libgazebo9-dev    # 如果下一步不行，执行这一步
 ```
 - 进行MAKE创建编译
 ```
-sudo make -j4   # 4表示的是电脑4核，一定要有sudo，否则没权限
+sudo make -j4   # 4表示的是电脑4核，一定要有sudo，否则没权限,这一步有绿色的滚动，有一段时间
 ```
 - 成功后，进行安装
 ```
