@@ -73,3 +73,8 @@ rdesktop -g 800*600 -a 16 192.168.0.101
 -g 桌面大小
 以800*600（W＊H）窗口大小、真彩色、打开远程192.168.0.101
 ```
+
+### 浏览器安装flash
+```
+sudo apt install adobe-flashplugin
+```
