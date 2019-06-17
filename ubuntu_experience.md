@@ -78,3 +78,9 @@ rdesktop -g 800*600 -a 16 192.168.0.101
 ```
 sudo apt install adobe-flashplugin
 ```
+
+### rar文件解压缩
+```
+sudo apt install rar  #安装
+rar e filename.rar　　#使用rar方法解压缩
+```
