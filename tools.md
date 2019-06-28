@@ -121,4 +121,19 @@ git push origin --delete dev　　# 删除远程端的分支
 - 比如：```"git push origin master:master"``` 可以直接省略为"git push origin master".
 - 每个仓库都可以使用origin这个指针名字,不会冲突
 
+#### win搭建gitea
+- 下载安装
+	- 下载并安装git
+	- 在C盘根目录下创建gitea文件夹
+	- [下载](https://dl.gitea.io/gitea/) 合适的win x64版本的软件，并命名为gitea.exe，放入gitea文件夹中。
+	- 安装mysql,并创建一个名为gitea的数据库
+	- 管理员方式打开cmd,输入：
+	```sc create gitea start= auto binPath= ""C:\gitea\gitea.exe" web --config "C:\gitea\custom\conf\app.ini""```
+	- 如果有问题， ```sc delete gitea``` 可以用这个命令删除服务。
+	- 在服务中找到gitea并启动
+	- 浏览器[访问](http://localhost:3000)即可访问了。
+- gitea调试
+	- 在打开的页面上配置gitea一些东西
+
+
 
